@@ -1,0 +1,442 @@
+{
+  "repository" : {
+    "vcs" : {
+      "type" : "Git",
+      "url" : "",
+      "revision" : "59a1e1cd2c50a49a393c5e68e0a051b26441ec1a",
+      "path" : ""
+    },
+    "vcs_processed" : {
+      "type" : "Git",
+      "url" : "",
+      "revision" : "59a1e1cd2c50a49a393c5e68e0a051b26441ec1a",
+      "path" : ""
+    },
+    "config" : { }
+  },
+  "analyzer" : {
+    "start_time" : "2023-07-20T13:25:06.199766463Z",
+    "end_time" : "2023-07-20T13:25:13.179699383Z",
+    "environment" : {
+      "ort_version" : "DOCKER-SNAPSHOT",
+      "java_version" : "17.0.7",
+      "os" : "Linux",
+      "processors" : 5,
+      "max_memory" : 2084569088,
+      "variables" : {
+        "JAVA_HOME" : "/opt/java/openjdk",
+        "ANDROID_HOME" : "/opt/android-sdk"
+      },
+      "tool_versions" : {
+        "PNPM" : "8.6.7"
+      }
+    },
+    "config" : {
+      "allow_dynamic_versions" : false,
+      "skip_excluded" : false
+    },
+    "result" : {
+      "projects" : [ {
+        "id" : "PIP::python:59a1e1cd2c50a49a393c5e68e0a051b26441ec1a",
+        "definition_file_path" : "python/requirements.txt",
+        "declared_licenses" : [ ],
+        "declared_licenses_processed" : { },
+        "vcs" : {
+          "type" : "",
+          "url" : "",
+          "revision" : "",
+          "path" : ""
+        },
+        "vcs_processed" : {
+          "type" : "Git",
+          "url" : "",
+          "revision" : "59a1e1cd2c50a49a393c5e68e0a051b26441ec1a",
+          "path" : "python"
+        },
+        "homepage_url" : "",
+        "scope_names" : [ "install" ]
+      }, {
+        "id" : "PNPM::simple-node:1.0.0",
+        "definition_file_path" : "node/package.json",
+        "declared_licenses" : [ "ISC" ],
+        "declared_licenses_processed" : {
+          "spdx_expression" : "ISC"
+        },
+        "vcs" : {
+          "type" : "",
+          "url" : "",
+          "revision" : "",
+          "path" : ""
+        },
+        "vcs_processed" : {
+          "type" : "Git",
+          "url" : "",
+          "revision" : "59a1e1cd2c50a49a393c5e68e0a051b26441ec1a",
+          "path" : "node"
+        },
+        "homepage_url" : "",
+        "scope_names" : [ "dependencies" ]
+      }, {
+        "id" : "Unmanaged:::59a1e1cd2c50a49a393c5e68e0a051b26441ec1a",
+        "definition_file_path" : "",
+        "declared_licenses" : [ ],
+        "declared_licenses_processed" : { },
+        "vcs" : {
+          "type" : "",
+          "url" : "",
+          "revision" : "",
+          "path" : ""
+        },
+        "vcs_processed" : {
+          "type" : "Git",
+          "url" : "",
+          "revision" : "59a1e1cd2c50a49a393c5e68e0a051b26441ec1a",
+          "path" : ""
+        },
+        "homepage_url" : "",
+        "scope_names" : [ ]
+      } ],
+      "packages" : [ {
+        "id" : "NPM::p-timeout:6.1.2",
+        "purl" : "pkg:npm/p-timeout@6.1.2",
+        "authors" : [ "Sindre Sorhus" ],
+        "declared_licenses" : [ "MIT" ],
+        "declared_licenses_processed" : {
+          "spdx_expression" : "MIT"
+        },
+        "description" : "Timeout a promise after a specified amount of time",
+        "homepage_url" : "https://github.com/sindresorhus/p-timeout#readme",
+        "binary_artifact" : {
+          "url" : "",
+          "hash" : {
+            "value" : "",
+            "algorithm" : ""
+          }
+        },
+        "source_artifact" : {
+          "url" : "https://registry.npmjs.org/p-timeout/-/p-timeout-6.1.2.tgz",
+          "hash" : {
+            "value" : "22b8d8a78abf5e103030211c5fc6dee1166a6aa5",
+            "algorithm" : "SHA-1"
+          }
+        },
+        "vcs" : {
+          "type" : "Git",
+          "url" : "git+https://github.com/sindresorhus/p-timeout.git",
+          "revision" : "6ddb49ed7dc75054d10f379b47e0121239cf3688",
+          "path" : ""
+        },
+        "vcs_processed" : {
+          "type" : "Git",
+          "url" : "https://github.com/sindresorhus/p-timeout.git",
+          "revision" : "6ddb49ed7dc75054d10f379b47e0121239cf3688",
+          "path" : ""
+        }
+      }, {
+        "id" : "NPM::p-wait-for:5.0.2",
+        "purl" : "pkg:npm/p-wait-for@5.0.2",
+        "authors" : [ "Sindre Sorhus" ],
+        "declared_licenses" : [ "MIT" ],
+        "declared_licenses_processed" : {
+          "spdx_expression" : "MIT"
+        },
+        "description" : "Wait for a condition to be true",
+        "homepage_url" : "https://github.com/sindresorhus/p-wait-for#readme",
+        "binary_artifact" : {
+          "url" : "",
+          "hash" : {
+            "value" : "",
+            "algorithm" : ""
+          }
+        },
+        "source_artifact" : {
+          "url" : "https://registry.npmjs.org/p-wait-for/-/p-wait-for-5.0.2.tgz",
+          "hash" : {
+            "value" : "1546a15e64accf1897377cb1507fa4c756fffe96",
+            "algorithm" : "SHA-1"
+          }
+        },
+        "vcs" : {
+          "type" : "Git",
+          "url" : "git+https://github.com/sindresorhus/p-wait-for.git",
+          "revision" : "f0499f2957425b71850e6bd7db4fba32f1b81e74",
+          "path" : ""
+        },
+        "vcs_processed" : {
+          "type" : "Git",
+          "url" : "https://github.com/sindresorhus/p-wait-for.git",
+          "revision" : "f0499f2957425b71850e6bd7db4fba32f1b81e74",
+          "path" : ""
+        }
+      }, {
+        "id" : "PyPI::certifi:2023.5.7",
+        "purl" : "pkg:pypi/certifi@2023.5.7",
+        "authors" : [ "Kenneth Reitz <me@kennethreitz.com>" ],
+        "declared_licenses" : [ "MPL-2.0", "Mozilla Public License 2.0 (MPL 2.0)" ],
+        "declared_licenses_processed" : {
+          "spdx_expression" : "MPL-2.0",
+          "mapped" : {
+            "Mozilla Public License 2.0 (MPL 2.0)" : "MPL-2.0"
+          }
+        },
+        "description" : "Python package for providing Mozilla's CA Bundle.",
+        "homepage_url" : "https://github.com/certifi/python-certifi",
+        "binary_artifact" : {
+          "url" : "https://files.pythonhosted.org/packages/9d/19/59961b522e6757f0c9097e4493fa906031b95b3ebe9360b2c3083561a6b4/certifi-2023.5.7-py3-none-any.whl",
+          "hash" : {
+            "value" : "c6c2e98f5c7869efca1f8916fed228dd91539f9f1b444c314c06eef02980c716",
+            "algorithm" : "SHA-256"
+          }
+        },
+        "source_artifact" : {
+          "url" : "https://files.pythonhosted.org/packages/93/71/752f7a4dd4c20d6b12341ed1732368546bc0ca9866139fe812f6009d9ac7/certifi-2023.5.7.tar.gz",
+          "hash" : {
+            "value" : "0f0d56dc5a6ad56fd4ba36484d6cc34451e1c6548c61daad8c320169f91eddc7",
+            "algorithm" : "SHA-256"
+          }
+        },
+        "vcs" : {
+          "type" : "",
+          "url" : "",
+          "revision" : "",
+          "path" : ""
+        },
+        "vcs_processed" : {
+          "type" : "Git",
+          "url" : "https://github.com/certifi/python-certifi.git",
+          "revision" : "",
+          "path" : ""
+        }
+      }, {
+        "id" : "PyPI::charset-normalizer:3.2.0",
+        "purl" : "pkg:pypi/charset-normalizer@3.2.0",
+        "authors" : [ "Ahmed TAHRI <ahmed.tahri@cloudnursery.dev>" ],
+        "declared_licenses" : [ "MIT", "MIT License" ],
+        "declared_licenses_processed" : {
+          "spdx_expression" : "MIT",
+          "mapped" : {
+            "MIT License" : "MIT"
+          }
+        },
+        "description" : "The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet.",
+        "homepage_url" : "https://github.com/Ousret/charset_normalizer",
+        "binary_artifact" : {
+          "url" : "https://files.pythonhosted.org/packages/bf/a0/188f223c7d8b924fb9b554b9d27e0e7506fd5bf9cfb6dbacb2dfd5832b53/charset_normalizer-3.2.0-py3-none-any.whl",
+          "hash" : {
+            "value" : "8e098148dd37b4ce3baca71fb394c81dc5d9c7728c95df695d2dca218edf40e6",
+            "algorithm" : "SHA-256"
+          }
+        },
+        "source_artifact" : {
+          "url" : "https://files.pythonhosted.org/packages/2a/53/cf0a48de1bdcf6ff6e1c9a023f5f523dfe303e4024f216feac64b6eb7f67/charset-normalizer-3.2.0.tar.gz",
+          "hash" : {
+            "value" : "3bb3d25a8e6c0aedd251753a79ae98a093c7e7b471faa3aa9a93a81431987ace",
+            "algorithm" : "SHA-256"
+          }
+        },
+        "vcs" : {
+          "type" : "",
+          "url" : "",
+          "revision" : "",
+          "path" : ""
+        },
+        "vcs_processed" : {
+          "type" : "Git",
+          "url" : "https://github.com/Ousret/charset_normalizer.git",
+          "revision" : "",
+          "path" : ""
+        }
+      }, {
+        "id" : "PyPI::idna:3.4",
+        "purl" : "pkg:pypi/idna@3.4",
+        "authors" : [ "Kim Davies <kim@cynosure.com.au>" ],
+        "declared_licenses" : [ "BSD License" ],
+        "declared_licenses_processed" : {
+          "unmapped" : [ "BSD License" ]
+        },
+        "description" : "Internationalized Domain Names in Applications (IDNA)",
+        "homepage_url" : "",
+        "binary_artifact" : {
+          "url" : "https://files.pythonhosted.org/packages/fc/34/3030de6f1370931b9dbb4dad48f6ab1015ab1d32447850b9fc94e60097be/idna-3.4-py3-none-any.whl",
+          "hash" : {
+            "value" : "90b77e79eaa3eba6de819a0c442c0b4ceefc341a7a2ab77d7562bf49f425c5c2",
+            "algorithm" : "SHA-256"
+          }
+        },
+        "source_artifact" : {
+          "url" : "https://files.pythonhosted.org/packages/8b/e1/43beb3d38dba6cb420cefa297822eac205a277ab43e5ba5d5c46faf96438/idna-3.4.tar.gz",
+          "hash" : {
+            "value" : "814f528e8dead7d329833b91c5faa87d60bf71824cd12a7530b5526063d02cb4",
+            "algorithm" : "SHA-256"
+          }
+        },
+        "vcs" : {
+          "type" : "",
+          "url" : "",
+          "revision" : "",
+          "path" : ""
+        },
+        "vcs_processed" : {
+          "type" : "Git",
+          "url" : "https://github.com/kjd/idna.git",
+          "revision" : "",
+          "path" : ""
+        }
+      }, {
+        "id" : "PyPI::requests:2.31.0",
+        "purl" : "pkg:pypi/requests@2.31.0",
+        "authors" : [ "Kenneth Reitz <me@kennethreitz.org>" ],
+        "declared_licenses" : [ "Apache 2.0", "Apache Software License" ],
+        "declared_licenses_processed" : {
+          "spdx_expression" : "Apache-2.0",
+          "mapped" : {
+            "Apache 2.0" : "Apache-2.0",
+            "Apache Software License" : "Apache-2.0"
+          }
+        },
+        "description" : "Python HTTP for Humans.",
+        "homepage_url" : "https://requests.readthedocs.io",
+        "binary_artifact" : {
+          "url" : "https://files.pythonhosted.org/packages/70/8e/0e2d847013cb52cd35b38c009bb167a1a26b2ce6cd6965bf26b47bc0bf44/requests-2.31.0-py3-none-any.whl",
+          "hash" : {
+            "value" : "58cd2187c01e70e6e26505bca751777aa9f2ee0b7f4300988b709f44e013003f",
+            "algorithm" : "SHA-256"
+          }
+        },
+        "source_artifact" : {
+          "url" : "https://files.pythonhosted.org/packages/9d/be/10918a2eac4ae9f02f6cfe6414b7a155ccd8f7f9d4380d62fd5b955065c3/requests-2.31.0.tar.gz",
+          "hash" : {
+            "value" : "942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1",
+            "algorithm" : "SHA-256"
+          }
+        },
+        "vcs" : {
+          "type" : "",
+          "url" : "",
+          "revision" : "",
+          "path" : ""
+        },
+        "vcs_processed" : {
+          "type" : "Git",
+          "url" : "https://github.com/psf/requests.git",
+          "revision" : "",
+          "path" : ""
+        }
+      }, {
+        "id" : "PyPI::urllib3:2.0.4",
+        "purl" : "pkg:pypi/urllib3@2.0.4",
+        "authors" : [ "Andrey Petrov <andrey.petrov@shazow.net>" ],
+        "declared_licenses" : [ "MIT License" ],
+        "declared_licenses_processed" : {
+          "spdx_expression" : "MIT",
+          "mapped" : {
+            "MIT License" : "MIT"
+          }
+        },
+        "description" : "HTTP library with thread-safe connection pooling, file post, and more.",
+        "homepage_url" : "",
+        "binary_artifact" : {
+          "url" : "https://files.pythonhosted.org/packages/9b/81/62fd61001fa4b9d0df6e31d47ff49cfa9de4af03adecf339c7bc30656b37/urllib3-2.0.4-py3-none-any.whl",
+          "hash" : {
+            "value" : "de7df1803967d2c2a98e4b11bb7d6bd9210474c46e8a0401514e3a42a75ebde4",
+            "algorithm" : "SHA-256"
+          }
+        },
+        "source_artifact" : {
+          "url" : "https://files.pythonhosted.org/packages/31/ab/46bec149bbd71a4467a3063ac22f4486ecd2ceb70ae8c70d5d8e4c2a7946/urllib3-2.0.4.tar.gz",
+          "hash" : {
+            "value" : "8d22f86aae8ef5e410d4f539fde9ce6b2113a001bb4d189e0aed70642d602b11",
+            "algorithm" : "SHA-256"
+          }
+        },
+        "vcs" : {
+          "type" : "",
+          "url" : "",
+          "revision" : "",
+          "path" : ""
+        },
+        "vcs_processed" : {
+          "type" : "Git",
+          "url" : "https://github.com/urllib3/urllib3.git",
+          "revision" : "",
+          "path" : ""
+        }
+      } ],
+      "dependency_graphs" : {
+        "PIP" : {
+          "packages" : [ "PyPI::certifi:2023.5.7", "PyPI::charset-normalizer:3.2.0", "PyPI::idna:3.4", "PyPI::requests:2.31.0", "PyPI::urllib3:2.0.4" ],
+          "scopes" : {
+            ":python:59a1e1cd2c50a49a393c5e68e0a051b26441ec1a:install" : [ {
+              "root" : 3
+            } ]
+          },
+          "nodes" : [ { }, {
+            "pkg" : 1
+          }, {
+            "pkg" : 2
+          }, {
+            "pkg" : 4
+          }, {
+            "pkg" : 3
+          } ],
+          "edges" : [ {
+            "from" : 4,
+            "to" : 0
+          }, {
+            "from" : 4,
+            "to" : 1
+          }, {
+            "from" : 4,
+            "to" : 2
+          }, {
+            "from" : 4,
+            "to" : 3
+          } ]
+        },
+        "PNPM" : {
+          "packages" : [ "NPM::p-timeout:6.1.2", "NPM::p-wait-for:5.0.2" ],
+          "scopes" : {
+            ":simple-node:1.0.0:dependencies" : [ {
+              "root" : 1
+            } ]
+          },
+          "nodes" : [ { }, {
+            "pkg" : 1
+          } ],
+          "edges" : [ {
+            "from" : 1,
+            "to" : 0
+          } ]
+        },
+        "Unmanaged" : {
+          "nodes" : [ ],
+          "edges" : [ ]
+        }
+      }
+    }
+  },
+  "scanner" : null,
+  "advisor" : null,
+  "evaluator" : null,
+  "resolved_configuration" : {
+    "package_curations" : [ {
+      "provider" : {
+        "id" : "DefaultDir"
+      },
+      "curations" : [ {
+        "id" : "PyPI::idna:(,4.0[",
+        "curations" : {
+          "comment" : "The library is licensed under BSD-3-Clause, see:\nhttps://github.com/kjd/idna/blob/master/LICENSE.md\n",
+          "declared_license_mapping" : {
+            "BSD License" : "BSD-3-Clause"
+          }
+        }
+      } ]
+    }, {
+      "provider" : {
+        "id" : "DefaultFile"
+      },
+      "curations" : [ ]
+    } ]
+  }
+}
