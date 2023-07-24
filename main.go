@@ -17,7 +17,6 @@ func main() {
 	analyzerResult := NewAnalyzerResult(analyzerResultFilePath)
 	p := NewProject(projectName, analyzerResult)
 	p.EnrichContributors()
-	p.ShowDependencyStat()
 	for _, k := range GenerateKudos(p) {
 		fmt.Println(string(k.ToJSON()))
 	}

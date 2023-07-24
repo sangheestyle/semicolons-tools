@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type Project struct {
 	name         string
@@ -22,9 +24,16 @@ type Contributor struct {
 	score      float32
 }
 
+func min(x, y int) int {
+	if x < y {
+		return x
+	}
+	return y
+}
+
 func NewProject(projectName string, a *AnalyzerResult) *Project {
-	maxDepth := 3
-	weightFactors := []float32{1, 0.5, 0.25}
+	maxDepth := 10
+	weightFactors := []float32{1, 0.5, 0.25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 
 	p := new(Project)
 	p.name = projectName
@@ -45,21 +54,32 @@ func NewProject(projectName string, a *AnalyzerResult) *Project {
 		}
 
 		currentNodes := roots
-		for depth := 1; depth <= maxDepth; depth++ {
+		for currentDepth := 1; currentDepth <= maxDepth; currentDepth++ {
 			nextNodes := map[string]bool{}
-			for _, edge := range dg.Edges {
-				from := nodeLookup[edge.From]
-				to := nodeLookup[edge.To]
-				if _, found := currentNodes[from]; found {
-					nextNodes[to] = true
-					packageDepthLookup[from] = depth
-				}
+			for currentNode := range currentNodes {
+				for _, edge := range dg.Edges {
+					from := nodeLookup[edge.From]
+					to := nodeLookup[edge.To]
+					if currentNode == from {
+						nextNodes[to] = true
+						if depth, ok := packageDepthLookup[from]; ok {
+							packageDepthLookup[from] = min(depth, currentDepth)
+						} else {
+							packageDepthLookup[from] = currentDepth
+						}
 
+						if depth, ok := packageDepthLookup[to]; ok {
+							packageDepthLookup[to] = min(depth, currentDepth)
+						} else {
+							packageDepthLookup[to] = currentDepth
+						}
+					}
+				}
 			}
 
 			if len(nextNodes) == 0 {
 				for node := range currentNodes {
-					packageDepthLookup[node] = depth
+					packageDepthLookup[node] = currentDepth
 				}
 
 				break
@@ -70,6 +90,11 @@ func NewProject(projectName string, a *AnalyzerResult) *Project {
 	}
 
 	for _, pkg := range a.Analyzer.Result.Packages {
+		depth, ok := packageDepthLookup[pkg.ID]
+		if !ok {
+			continue
+		}
+
 		d := &Dependency{
 			id:           pkg.ID,
 			vcsType:      pkg.VCSProcessed.Type,
@@ -79,9 +104,10 @@ func NewProject(projectName string, a *AnalyzerResult) *Project {
 			contributors: map[string]*Contributor{},
 		}
 
-		d.depth = packageDepthLookup[pkg.ID]
+		d.depth = depth
 		d.weight = weightFactors[packageDepthLookup[pkg.ID]-1]
 		p.dependencies = append(p.dependencies, d)
+
 	}
 
 	return p
