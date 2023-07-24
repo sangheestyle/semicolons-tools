@@ -31,13 +31,14 @@ func GenerateEmails(repoUrls []string) map[string][]string {
 
 			destPath, err := os.MkdirTemp("", "dir")
 			if err != nil {
-				log.Println("1")
 				log.Fatal(err)
 			}
 
 			emails := []string{}
 			if err := cloneRepository(url, destPath); err != nil {
-				fmt.Printf("Error cloning repository %s: %s\n", url, err)
+				// Just skip if error
+				// e.g., https://github.com/substack/node-concat-map.git
+				// log.Printf("Error cloning repository %s: %s\n", url, err)
 			} else {
 				emails = getAuthorEmails(destPath)
 			}
